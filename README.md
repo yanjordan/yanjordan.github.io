@@ -1,4 +1,4 @@
-# YanJordan.github.io
+# yanjrdan.github.io
 Repository for Zeyin Yan's academic research website.
 
 
