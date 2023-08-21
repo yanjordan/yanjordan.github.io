@@ -1,0 +1,49 @@
+﻿Acta Crystallographica Section A: Foundations of Crystallography 	Acta Crystallogr., Sect. A: Found. Crystallogr.
+Acta Crystallographica, Section A: Foundations and Advances 	Acta Crystallogr., Sect. A: Found. Adv.
+Acta Crystallographica Section D: Biological Crystallography 	Acta Crystallogr., Sect. D: Biol. Crystallogr.
+Acta Crystallographica Section D: Structural Biology 	Acta Crystallogr., Sect. D: Struct. Biol.
+Acta Crystallographica Section B Structural Science, Crystal Engineering and Materials 	Acta Crystallogr., Sect. B: Struct. Sci., Cryst. Eng. Mater.
+Annual Review of Physical Chemistry 	Annu. Rev. Phys. Chem.
+Angewandte Chemie, International Edition	Angew. Chem., Int. Ed.
+Bioinformatics 	Bioinformatics
+Cell Research 	Cell Res.
+Chemical Reviews 	Chem. Rev.
+Chemical Science 	Chem. Sci.
+Chemical Communications 	Chem. Commun.
+Communications Chemistry 	Commun. Chem.
+Current Opinion in Structural Biology 	Curr. Opin. Struct. Biol.
+Frontiers in Chemistry 	Front. Chem.
+Journal of Biological Chemistry 	J. Biol. Chem.
+Journal of Biomolecular NMR 	J. Biomol. NMR
+Journal of Biological Inorganic Chemistry 	J. Biol. Inorg. Chem.
+Journal of Chemical Information and Modeling 	J. Chem. Inf. Model.
+Journal of Chemical Physics 	J. Chem. Phys.
+Journal of Chemical Theory and Computation 	J. Chem. Theory Comput.
+Journal of Computational Chemistry 	J. Comput. Chem.
+Journal of Computer-Aided Molecular Design 	J. Comput.-Aided Mol. Des.
+Journal of Inorganic Biochemistry 	J. Inorg. Biochem.
+Journal of Medicinal Chemistry 	J. Med. Chem.
+Journal of Molecular Biology 	J. Mol. Biol.
+Journal of Physical Chemistry 	J. Phys. Chem.
+Journal of Physical Chemistry A 	J. Phys. Chem. A
+Journal of Physical Chemistry B 	J. Phys. Chem. B
+Journal of Physical Chemistry C 	J. Phys. Chem. C
+Journal of the American Chemical Society 	J. Am. Chem. Soc.
+Journal of Virology 	J. Virol.
+Molecular Pharmacology 	Mol. Pharmacol.
+Nature 	Nature
+Nature Communications 	Nat. Commun.
+Nature Protocols 	Nat. Protoc.
+Nature Structural & Molecular Biology 	Nat. Struct. Mol. Biol.
+Nature Reviews Drug Discovery 	Nat. Rev. Drug Discovery
+Protein & Cell 	Protein Cell
+Science 	Science
+Theoretica Chimica Acta 	Theor. Chim. Acta
+Topics in Current Chemistry 	Top. Curr. Chem.
+Wiley Interdisciplinary Reviews: Computational Molecular Science	Wiley Interdiscip. Rev.: Comput. Mol. Sci.
+Proceedings of the National Academy of Sciences of the United States of America 	Proc. Natl. Acad. Sci. U. S. A.
+International Journal of Molecular Sciences 	Int. J. Mol. Sci.
+Inorganic Chemistry 	Inorg. Chem.
+Molecules 	Molecules
+
+
