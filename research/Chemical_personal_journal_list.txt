@@ -31,6 +31,8 @@ Journal of Physical Chemistry C 	J. Phys. Chem. C
 Journal of the American Chemical Society 	J. Am. Chem. Soc.
 Journal of Virology 	J. Virol.
 Molecular Pharmacology 	Mol. Pharmacol.
+Molecular Systems Biology 	Mol. Syst. Biol.
+Molecules 	Molecules
 Nature 	Nature
 Nature Communications 	Nat. Commun.
 Nature Protocols 	Nat. Protoc.
@@ -44,6 +46,6 @@ Wiley Interdisciplinary Reviews: Computational Molecular Science	Wiley Interdisc
 Proceedings of the National Academy of Sciences of the United States of America 	Proc. Natl. Acad. Sci. U. S. A.
 International Journal of Molecular Sciences 	Int. J. Mol. Sci.
 Inorganic Chemistry 	Inorg. Chem.
-Molecules 	Molecules
+
 
 
