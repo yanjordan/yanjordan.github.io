@@ -8,6 +8,7 @@ ACS Chemical Biology 	ACS Chem. Biol.
 ACS Catalysis 	ACS Catal.
 ACS Central Science 	ACS Cent. Sci.
 ACS Omega 	ACS Omega
+Acta Pharmacologica Sinica 	Acta Pharmacol. Sin.
 Accounts of Chemical Research 	Acc. Chem. Res.
 Annual Review of Physical Chemistry 	Annu. Rev. Phys. Chem.
 Angewandte Chemie, International Edition	Angew. Chem., Int. Ed.
