@@ -1,0 +1,563 @@
+/* ==========================================================================
+   yanjordan.github.io
+   Hand-written, no framework. Generated copy lives at stylesheets/site.css -
+   edit src/static/css/site.css and re-run build.py.
+   ========================================================================== */
+
+:root {
+  --bg: #ffffff;
+  --bg-soft: #f6f7f9;
+  --bg-card: #fbfcfd;
+  --text: #22262b;
+  --text-muted: #62696f;
+  --text-faint: #8a9096;
+  --border: #e2e5e9;
+  --border-strong: #cfd4da;
+  --accent: #1a5490;
+  --accent-soft: #e8f0f8;
+  --accent-hover: #113c69;
+  --sidebar-w: 17rem;
+  --gap: 2rem;
+  --radius: 6px;
+  --maxw: 46rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16191d;
+    --bg-soft: #1d2126;
+    --bg-card: #1f2429;
+    --text: #e4e7ea;
+    --text-muted: #a8b0b7;
+    --text-faint: #7d858c;
+    --border: #2c3238;
+    --border-strong: #3d444b;
+    --accent: #79b3e6;
+    --accent-soft: #1d2b3a;
+    --accent-hover: #a3cbf0;
+  }
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 400 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, "Noto Sans SC", "PingFang SC",
+        "Microsoft YaHei", sans-serif;
+  font-feature-settings: "kern" 1;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---------- links ---------- */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color .15s ease, border-color .15s ease;
+}
+a:hover,
+a:focus-visible {
+  color: var(--accent-hover);
+  border-bottom-color: currentColor;
+}
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  padding: .6rem 1rem;
+  background: var(--accent);
+  color: #fff;
+  z-index: 10;
+}
+.skip-link:focus { left: 0; }
+
+/* ---------- layout ---------- */
+.wrapper {
+  display: grid;
+  grid-template-columns: var(--sidebar-w) minmax(0, 1fr);
+  gap: calc(var(--gap) * 1.6);
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 3rem 2rem 4rem;
+}
+
+main {
+  min-width: 0;
+  max-width: var(--maxw);
+}
+
+/* ---------- sidebar ---------- */
+.sidebar {
+  position: sticky;
+  top: 3rem;
+  align-self: start;
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+  padding-right: .5rem;
+  font-size: .9375rem;
+}
+
+.site-name {
+  margin: 0 0 .35rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.site-name a {
+  color: var(--text);
+  border: 0;
+}
+.site-name a:hover { color: var(--accent); }
+
+.site-role {
+  margin: 0 0 1.6rem;
+  color: var(--text);
+  font-size: .9375rem;
+  line-height: 1.5;
+}
+
+.sidebar-block { margin-top: 1.8rem; }
+
+.sidebar-heading {
+  margin: 0 0 .5rem;
+  font-size: .6875rem;
+  font-weight: 600;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.nav,
+.link-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav { margin-bottom: .5rem; }
+.nav li { margin: 0; }
+.nav a {
+  display: block;
+  padding: .34rem 0;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  font-weight: 450;
+}
+.nav a:hover { color: var(--accent); }
+.nav a.current {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.link-list li { margin: .2rem 0; }
+
+/* ---------- typography ---------- */
+h2, h3, h4 {
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+h2 {
+  margin: 0 0 1rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+h3 {
+  margin: 0 0 .6rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+p { margin: 0 0 1rem; }
+
+section { margin-bottom: 2.8rem; }
+section:last-of-type { margin-bottom: 1.5rem; }
+
+.lede {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.muted { color: var(--text-muted); }
+.small { font-size: .875rem; }
+.more { margin-top: 1.2rem; font-size: .9375rem; }
+
+.empty-state {
+  padding: 1.6rem;
+  background: var(--bg-soft);
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius);
+  color: var(--text-muted);
+  text-align: center;
+}
+
+/* ---------- research thrusts ---------- */
+.thrust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 1rem;
+  margin: 1.4rem 0;
+}
+
+.thrust-card {
+  padding: 1.1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.thrust-card h3 {
+  margin: 0 0 .6rem;
+  font-size: 1rem;
+}
+
+.thrust-tag {
+  margin: 0 0 .4rem;
+  font-size: .6875rem;
+  font-weight: 600;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.thrust {
+  padding-bottom: 1.8rem;
+  border-bottom: 1px solid var(--border);
+}
+.thrust:last-of-type { border-bottom: 0; }
+
+.keyword-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem;
+  list-style: none;
+  margin: .9rem 0 0;
+  padding: 0;
+}
+.keyword-list li {
+  padding: .16rem .5rem;
+  background: var(--accent-soft);
+  border-radius: 3px;
+  color: var(--accent);
+  font-size: .75rem;
+  white-space: nowrap;
+}
+
+/* ---------- definition lists ---------- */
+.foundations,
+.skills { margin: 1.2rem 0 0; }
+
+.foundations dt,
+.skills dt {
+  margin-bottom: .3rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.foundations dd,
+.skills dd {
+  margin: 0 0 1.3rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--border);
+  color: var(--text-muted);
+}
+.foundations dd p { margin-bottom: .4rem; }
+.skills dd { color: var(--text-muted); font-size: .9375rem; }
+
+/* ---------- publications ---------- */
+.year-heading {
+  margin: 0 0 1rem;
+  padding-bottom: .35rem;
+  border-bottom: 2px solid var(--border-strong);
+  font-size: 1.05rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.pub-list {
+  margin: 0;
+  padding-left: 1.6rem;
+}
+.pub-list.compact { list-style: none; padding-left: 0; }
+
+.pub {
+  margin-bottom: 1.9rem;
+  padding-left: .3rem;
+}
+.pub::marker { color: var(--text-faint); font-size: .875rem; }
+
+.pub-selected { position: relative; }
+.pub-selected::before {
+  content: "★";
+  position: absolute;
+  left: -2.5rem;
+  top: .1rem;
+  color: var(--accent);
+  font-size: .8rem;
+}
+
+.pub-title {
+  margin: 0 0 .3rem;
+  font-weight: 550;
+  line-height: 1.45;
+}
+
+.pub-authors {
+  margin: 0 0 .25rem;
+  color: var(--text-muted);
+  font-size: .9375rem;
+}
+.pub-authors .self { color: var(--text); font-weight: 650; }
+
+.pub-venue {
+  margin: 0 0 .5rem;
+  color: var(--text-muted);
+  font-size: .9375rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.pub-flag {
+  margin: 0 0 .4rem;
+  color: var(--text-faint);
+  font-size: .8125rem;
+}
+
+.pub-note {
+  margin: .5rem 0 .7rem;
+  padding-left: .9rem;
+  border-left: 2px solid var(--border);
+  color: var(--text-muted);
+  font-size: .9375rem;
+}
+
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin: .5rem 0 0;
+}
+
+.pub-compact {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+  font-size: .9375rem;
+  line-height: 1.6;
+}
+.pub-compact:last-child { border-bottom: 0; }
+.pub-compact .pub-authors,
+.pub-compact .pub-venue { display: inline; margin: 0; }
+.pub-title-inline {
+  display: block;
+  margin: .15rem 0;
+  color: var(--text);
+  font-weight: 550;
+}
+a.pub-title-inline:hover { color: var(--accent); }
+
+/* ---------- buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: .2rem .6rem;
+  background: var(--bg-soft);
+  border: 1px solid var(--border-strong);
+  border-radius: 3px;
+  color: var(--text-muted);
+  font-size: .78125rem;
+  font-weight: 500;
+  letter-spacing: .02em;
+}
+.btn:hover,
+.btn:focus-visible {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.btn-sm { padding: .1rem .45rem; font-size: .75rem; }
+
+/* ---------- figures ---------- */
+.fig { margin: 0; }
+.fig img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #fff;
+}
+.fig figcaption {
+  margin-top: .5rem;
+  color: var(--text-muted);
+  font-size: .84375rem;
+  line-height: 1.5;
+}
+
+.figure-grid {
+  display: grid;
+  gap: 1.6rem;
+}
+
+.pub-figure { margin-top: .7rem; }
+.pub-figure summary {
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: .84375rem;
+  user-select: none;
+}
+.pub-figure summary:hover { color: var(--accent); }
+.pub-figure[open] summary { margin-bottom: .6rem; }
+
+/* ---------- code page ---------- */
+.code-list,
+.plain-list,
+.news-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.code-item {
+  margin-bottom: 1.7rem;
+  padding-bottom: 1.7rem;
+  border-bottom: 1px solid var(--border);
+}
+.code-item:last-child { border-bottom: 0; }
+
+.code-name {
+  margin: 0 0 .3rem;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: .9375rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* ---------- CV timeline ---------- */
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.timeline > li {
+  display: grid;
+  grid-template-columns: 9.5rem minmax(0, 1fr);
+  gap: 1.2rem;
+  margin-bottom: 1.7rem;
+}
+.tl-period {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: .875rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.tl-body p { margin: 0 0 .25rem; }
+.tl-body p:last-child { margin-bottom: 0; }
+.tl-role { font-weight: 600; color: var(--text); }
+.tl-org { color: var(--text-muted); }
+
+.plain-list > li {
+  margin-bottom: 1.1rem;
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid var(--border);
+}
+.plain-list > li:last-child { border-bottom: 0; }
+
+/* ---------- news ---------- */
+.news-list > li {
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr);
+  gap: 1.2rem;
+  margin-bottom: 1.1rem;
+}
+.news-date {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: .875rem;
+  font-variant-numeric: tabular-nums;
+}
+.news-body { margin: 0; }
+
+/* ---------- footer ---------- */
+.page-footer {
+  margin-top: 3.5rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--border);
+}
+.page-footer p { margin: 0; color: var(--text-faint); }
+
+/* ==========================================================================
+   Responsive. The old stylesheet reserved 320px of right padding on the header
+   between 720-960px for a download button that this site does not have, which
+   squeezed the content into a narrow strip on tablets. Fixed here.
+   ========================================================================== */
+@media (max-width: 62rem) {
+  :root { --sidebar-w: 14.5rem; --gap: 1.5rem; }
+  .wrapper { padding: 2.5rem 1.5rem 3rem; }
+}
+
+@media (max-width: 52rem) {
+  .wrapper {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+    padding: 2rem 1.25rem 3rem;
+  }
+  .sidebar {
+    position: static;
+    max-height: none;
+    overflow: visible;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .site-name { font-size: 1.75rem; }
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .25rem 1.1rem;
+  }
+  .nav a { border-bottom: 0; padding: .2rem 0; }
+  .nav a.current { border-bottom: 2px solid var(--accent); }
+  .sidebar-block { margin-top: 1.2rem; }
+  .link-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .25rem 1.1rem;
+  }
+  main { max-width: none; }
+  .timeline > li,
+  .news-list > li { grid-template-columns: minmax(0, 1fr); gap: .3rem; }
+  .pub-selected::before { left: -1.9rem; }
+}
+
+@media (max-width: 30rem) {
+  body { font-size: 15.5px; }
+  .wrapper { padding: 1.5rem 1rem 2.5rem; }
+  h2 { font-size: 1.25rem; }
+  .pub-list { padding-left: 1.2rem; }
+}
+
+/* ---------- print (so the web CV prints cleanly) ---------- */
+@media print {
+  :root { --accent: #000; --text: #000; --text-muted: #333; }
+  .wrapper { display: block; max-width: none; padding: 0; }
+  .sidebar { position: static; max-height: none; }
+  .nav, .skip-link, .pub-links, .pub-figure, .page-footer { display: none; }
+  a { color: #000; border: 0; }
+  section { margin-bottom: 1.2rem; page-break-inside: avoid; }
+}

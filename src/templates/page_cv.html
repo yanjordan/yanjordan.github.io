@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% from "_macros.html" import publication_compact %}
+
+{% block description %}Curriculum vitae of Zeyin Yan: appointments, education, funding, invited talks, publications and technical skills.{% endblock %}
+
+{% block content %}
+      <section>
+        <h2>Curriculum Vitae</h2>
+        <p class="lede">{{ cv.intro }}</p>
+      </section>
+
+      <section>
+        <h3>Appointments</h3>
+        <ol class="timeline">
+          {% for a in cv.appointments %}
+          <li>
+            <p class="tl-period">{{ a.period }}</p>
+            <div class="tl-body">
+              <p class="tl-role">{{ a.role }}</p>
+              <p class="tl-org">{{ a.org }}</p>
+              <p class="muted small">{{ a.place }}</p>
+              {% if a.detail %}<p>{{ a.detail }}</p>{% endif %}
+            </div>
+          </li>
+          {% endfor %}
+        </ol>
+      </section>
+
+      <section>
+        <h3>Education</h3>
+        <ol class="timeline">
+          {% for e in cv.education %}
+          <li>
+            <p class="tl-period">{{ e.period }}</p>
+            <div class="tl-body">
+              <p class="tl-role">{{ e.degree }}</p>
+              <p class="tl-org">{{ e.org }}</p>
+              <p class="muted small">{{ e.place }}</p>
+              {% if e.detail %}<p>{{ e.detail }}</p>{% endif %}
+            </div>
+          </li>
+          {% endfor %}
+        </ol>
+      </section>
+
+      <section>
+        <h3>Funding</h3>
+        <ol class="timeline">
+          {% for f in cv.funding %}
+          <li>
+            <p class="tl-period">{{ f.period }}</p>
+            <div class="tl-body">
+              <p class="tl-role">{{ f.title }}</p>
+              <p class="tl-org">{{ f.org }}</p>
+              {% if f.detail %}<p class="muted small">{{ f.detail }}</p>{% endif %}
+            </div>
+          </li>
+          {% endfor %}
+        </ol>
+      </section>
+
+      <section>
+        <h3>Publications</h3>
+        <p class="muted small">
+          {{ pubs.count }} peer-reviewed papers, {{ pubs.first_author_count }} as first author.
+          See the <a href="publications.html">publications page</a> for abstracts, PDFs and supporting information.
+        </p>
+        <ul class="pub-list compact">
+          {% for p in pubs.all %}
+          {{ publication_compact(p) }}
+          {% endfor %}
+        </ul>
+        {% for t in pubs.theses %}
+        <p class="muted small">
+          Thesis: {{ t.title }}. {{ t.venue_html }}
+          {% if t.local_pdf %}<a class="btn btn-sm" href="{{ t.local_pdf }}">PDF</a>{% endif %}
+        </p>
+        {% endfor %}
+      </section>
+
+      <section>
+        <h3>Invited talks and conference presentations</h3>
+        <ul class="plain-list">
+          {% for t in cv.talks %}
+          <li>
+            <p class="tl-role">{{ t.title }}</p>
+            <p class="muted small">{{ t.venue }} &middot; {{ t.year }}</p>
+          </li>
+          {% endfor %}
+        </ul>
+      </section>
+
+      <section>
+        <h3>Skills</h3>
+        <dl class="skills">
+          {% for s in cv.skills %}
+          <dt>{{ s.label }}</dt>
+          <dd>{{ s['items'] }}</dd>
+          {% endfor %}
+        </dl>
+      </section>
+
+      <section>
+        <h3>Referees</h3>
+        <p class="muted">{{ cv.referees_note }}</p>
+      </section>
+{% endblock %}

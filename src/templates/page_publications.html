@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% from "_macros.html" import publication, pub_links %}
+
+{% block description %}Peer-reviewed publications of Zeyin Yan, with DOI, PDF and supporting information for each paper.{% endblock %}
+
+{% block content %}
+      <section>
+        <h2>Publications</h2>
+        <p class="lede">
+          {{ pubs.count }} peer-reviewed papers, {{ pubs.first_author_count }} as first author.
+          Every entry is generated from a single
+          <a href="src/data/publications.bib">BibTeX file</a>, so the citation data
+          here matches the record of the journal.
+        </p>
+        <p class="muted small">
+          <strong class="self">Bold</strong> marks my name.
+          &#8225; indicates joint first authorship.
+        </p>
+      </section>
+
+      {% for year, items in pubs.by_year %}
+      <section class="pub-year">
+        <h3 class="year-heading">{{ year }}</h3>
+        <ol class="pub-list">
+          {% for p in items %}
+          {{ publication(p) }}
+          {% endfor %}
+        </ol>
+      </section>
+      {% endfor %}
+
+      {% if pubs.theses %}
+      <section class="pub-year">
+        <h3 class="year-heading">Thesis</h3>
+        <ol class="pub-list">
+          {% for t in pubs.theses %}
+          <li class="pub">
+            <p class="pub-title">{{ t.title }}</p>
+            <p class="pub-authors">{{ t.author_html }}</p>
+            <p class="pub-venue">{{ t.venue_html }}</p>
+            {% if t.note %}<p class="pub-note">{{ t.note }}</p>{% endif %}
+            {{ pub_links(t) }}
+          </li>
+          {% endfor %}
+        </ol>
+      </section>
+      {% endif %}
+{% endblock %}

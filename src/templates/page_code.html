@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block description %}Open-source scientific code by Zeyin Yan: D2AF distortion analysis, ONIOM-based quantum refinement, tunnelling under electric fields, and density-matrix tools.{% endblock %}
+
+{% block content %}
+      <section>
+        <h2>Code</h2>
+        <p class="lede">{{ code.intro }}</p>
+      </section>
+
+      {% for group in code.groups %}
+      <section>
+        <h3>{{ group.language }}</h3>
+        <ul class="code-list">
+          {% for item in group['items'] %}
+          <li class="code-item">
+            <p class="code-name">{{ item.name }}</p>
+            <p>{{ item.summary }}</p>
+            <p class="pub-links">
+              {% for l in item.links %}
+              <a class="btn" href="{{ l.url }}" target="_blank" rel="noopener noreferrer">{{ l.label }}</a>
+              {% endfor %}
+              {% if item.paper_doi %}
+              <a class="btn" href="https://doi.org/{{ item.paper_doi }}" target="_blank" rel="noopener noreferrer">DOI</a>
+              {% endif %}
+            </p>
+            {% if item.paper %}
+            <p class="muted small">Used in: {{ item.paper }}</p>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endfor %}
+{% endblock %}

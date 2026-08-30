@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block description %}Teaching by Zeyin Yan at the Institute of Nanotechnology and Intelligence (inAI), Jinan University.{% endblock %}
+
+{% block content %}
+      <section>
+        <h2>Teaching</h2>
+        {% if teaching.intro %}
+        <p class="lede">{{ teaching.intro }}</p>
+        {% endif %}
+
+        {% if teaching.courses %}
+        <ul class="plain-list">
+          {% for c in teaching.courses %}
+          <li class="course">
+            <p class="tl-role">{{ c.title }}{% if c.code %} <span class="muted">({{ c.code }})</span>{% endif %}</p>
+            <p class="muted small">{{ c.term }}{% if c.level %} &middot; {{ c.level }}{% endif %}</p>
+            {% if c.body %}<p>{{ c.body }}</p>{% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        <p class="empty-state">{{ teaching.empty }}</p>
+        {% endif %}
+      </section>
+{% endblock %}

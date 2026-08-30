@@ -1,0 +1,63 @@
+{# Reusable fragments. #}
+
+{% macro figure(src, webp, alt, caption='', cls='') %}
+<figure class="fig{% if cls %} {{ cls }}{% endif %}">
+  <picture>
+    {% if webp %}<source srcset="{{ webp }}" type="image/webp">{% endif %}
+    <img src="{{ src }}" alt="{{ alt }}" loading="lazy" decoding="async">
+  </picture>
+  {% if caption %}<figcaption>{{ caption }}</figcaption>{% endif %}
+</figure>
+{% endmacro %}
+
+
+{% macro pub_links(p) %}
+<p class="pub-links">
+  {% if p.doi_url %}<a class="btn" href="{{ p.doi_url }}" target="_blank" rel="noopener noreferrer">DOI</a>{% endif %}
+  {% if p.local_pdf %}<a class="btn" href="{{ p.local_pdf }}">PDF</a>{% endif %}
+  {% if p.local_si %}<a class="btn" href="{{ p.local_si }}">SI</a>{% endif %}
+  {% if p.preprint_pdf %}<a class="btn" href="{{ p.preprint_pdf }}">Preprint</a>{% endif %}
+  {% if p.code_url %}<a class="btn" href="{{ p.code_url }}" target="_blank" rel="noopener noreferrer">Code</a>{% endif %}
+  {% if p.slides_pdf %}<a class="btn" href="{{ p.slides_pdf }}">Slides</a>{% endif %}
+</p>
+{% endmacro %}
+
+
+{# Full entry used on the publications page. #}
+{% macro publication(p, show_note=True, show_image=True) %}
+<li class="pub{% if p.is_selected %} pub-selected{% endif %}">
+  <p class="pub-title">
+    {% if p.doi_url %}
+    <a href="{{ p.doi_url }}" target="_blank" rel="noopener noreferrer">{{ p.title }}</a>
+    {% else %}
+    {{ p.title }}
+    {% endif %}
+  </p>
+  <p class="pub-authors">{{ p.author_html }}</p>
+  <p class="pub-venue">{{ p.venue_html }}</p>
+  {% if p.is_equal %}<p class="pub-flag">&#8225; joint first authors</p>{% endif %}
+  {% if show_note and p.note %}<p class="pub-note">{{ p.note }}</p>{% endif %}
+  {{ pub_links(p) }}
+  {% if show_image and p.local_image %}
+  <details class="pub-figure">
+    <summary>Graphical abstract</summary>
+    {{ figure(p.local_image, p.image_webp, 'Graphical abstract: ' ~ p.title) }}
+  </details>
+  {% endif %}
+</li>
+{% endmacro %}
+
+
+{# Compact one-liner used on the home page and the CV. #}
+{% macro publication_compact(p) %}
+<li class="pub-compact">
+  <span class="pub-authors">{{ p.author_html }}</span>
+  {% if p.doi_url %}
+  <a class="pub-title-inline" href="{{ p.doi_url }}" target="_blank" rel="noopener noreferrer">{{ p.title }}</a>
+  {% else %}
+  <span class="pub-title-inline">{{ p.title }}</span>
+  {% endif %}
+  <span class="pub-venue">{{ p.venue_html }}</span>
+  {% if p.local_pdf %}<a class="btn btn-sm" href="{{ p.local_pdf }}">PDF</a>{% endif %}
+</li>
+{% endmacro %}

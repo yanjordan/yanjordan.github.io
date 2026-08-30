@@ -1,0 +1,228 @@
+% ============================================================================
+% Authoritative publication list for yanjordan.github.io
+%
+% Verified against the Web of Science export (savedrecs.bib, Aug 2026).
+% This file is the SINGLE SOURCE OF TRUTH: every publication shown on the site
+% is rendered from here. To add a paper, append an entry and run `build.py`.
+%
+% Corrections applied relative to the old hand-written research.html:
+%   - JIB2017 was wrongly credited to Acta Cryst. B 2017, 73, 544-549
+%     (that is Voufack's paper). Correct: J. Inorg. Biochem. 2017, 176, 90-99.
+%   - JCP2018 title said "polarized neutron dffraction and magnetic Compton
+%     scattering data". Correct: "magnetic structure factors and magnetic
+%     Compton profiles data".
+%   - DOIs, issue numbers and article numbers were missing everywhere.
+%
+% Non-standard fields consumed by build.py:
+%   abbrev        journal abbreviation used for display
+%   local_pdf     PDF in research/
+%   local_si      supporting information in research/
+%   local_image   graphical abstract in research/
+%   preprint_pdf  author-version preprint in research/
+%   preprint_si   preprint supporting information
+%   selected      "true" marks a representative paper (shown on the home page)
+%   note          one-line plain-language summary written for this site
+% ============================================================================
+
+@article{yan2025d2af,
+  author        = {Yan, Zeyin and Liao, Yunteng Sam and Li, Xin and Chung, Lung Wa},
+  title         = {An efficient and flexible approach for local distortion: distortion distribution analysis enabled by fragmentation},
+  journal       = {Chemical Science},
+  abbrev        = {Chem. Sci.},
+  year          = {2025},
+  volume        = {16},
+  number        = {5},
+  pages         = {2351-2362},
+  doi           = {10.1039/d4sc07226j},
+  local_pdf     = {research/D2AF2025.pdf},
+  local_si      = {research/D2AF2025_SI.pdf},
+  local_image   = {research/D2AF.png},
+  preprint_pdf  = {research/D2AF_chemrxiv.pdf},
+  preprint_si   = {research/D2AF_chemrxiv_SI.pdf},
+  code_url      = {https://github.com/oscarchung-lab/D2AF},
+  selected      = {true},
+  note          = {A fragmentation-based scheme that decomposes distortion energy down to individual atoms, turning the distortion/interaction model into an atom-resolved distortion map. The resulting local-distortion indices are designed to serve as descriptors for regression and machine-learning models.}
+}
+
+@article{yan2024qrml,
+  author        = {Yan, Zeyin and Wei, Dacong and Li, Xin and Chung, Lung Wa},
+  title         = {Accelerating reliable multiscale quantum refinement of protein-drug systems enabled by machine learning},
+  journal       = {Nature Communications},
+  abbrev        = {Nat. Commun.},
+  year          = {2024},
+  volume        = {15},
+  number        = {1},
+  articleno     = {4181},
+  doi           = {10.1038/s41467-024-48453-4},
+  local_pdf     = {research/NC2024.pdf},
+  local_si      = {research/NC2024-SI.pdf},
+  local_image   = {research/NC2024.jpg},
+  selected      = {true},
+  note          = {Machine learning replaces the expensive quantum-mechanical step inside multiscale quantum refinement, making reliable refinement of protein-drug complexes tractable at a fraction of the cost.}
+}
+
+@article{ma2023tunneling,
+  author        = {Ma, Zhifeng and Yan, Zeyin and Li, Xin and Chung, Lung Wa},
+  title         = {Quantum Tunneling in Reactions Modulated by External Electric Fields: Reactivity and Selectivity},
+  journal       = {The Journal of Physical Chemistry Letters},
+  abbrev        = {J. Phys. Chem. Lett.},
+  year          = {2023},
+  volume        = {14},
+  number        = {5},
+  pages         = {1124-1132},
+  doi           = {10.1021/acs.jpclett.2c03461},
+  local_pdf     = {research/JPCL2023.pdf},
+  local_si      = {research/JPCL2023_SI.pdf},
+  local_image   = {research/JPCL2023.jpeg},
+  equal_contrib = {true},
+  selected      = {true},
+  note          = {External electric fields are shown to steer heavy-atom quantum tunnelling, offering a handle on both reactivity and selectivity that classical transition-state pictures miss.}
+}
+
+@article{zheng2022diiridium,
+  author        = {Zheng, Fangrui and Yang, Yuhong and Wu, Siye and Zhao, Shunan and Zhu, Yifan and Su, Huimin and Dai, Jun-Feng and Yan, Zeyin and Chung, Lung Wa and Wong, Keith Man-Chung},
+  title         = {Structure-property relationships of photofunctional diiridium(II) complexes with tetracationic charge and an unsupported Ir-Ir bond},
+  journal       = {Communications Chemistry},
+  abbrev        = {Commun. Chem.},
+  year          = {2022},
+  volume        = {5},
+  number        = {1},
+  articleno     = {159},
+  doi           = {10.1038/s42004-022-00775-4},
+  local_pdf     = {research/Commun_Chem2022.pdf},
+  note          = {Computational analysis of an unsupported Ir-Ir bonded diiridium(II) system, linking electronic structure to the observed photophysical behaviour.}
+}
+
+@article{yan2021qr,
+  author        = {Yan, Zeyin and Li, Xin and Chung, Lung Wa},
+  title         = {Multiscale Quantum Refinement Approaches for Metalloproteins},
+  journal       = {Journal of Chemical Theory and Computation},
+  abbrev        = {J. Chem. Theory Comput.},
+  year          = {2021},
+  volume        = {17},
+  number        = {6},
+  pages         = {3783-3796},
+  doi           = {10.1021/acs.jctc.1c00148},
+  local_pdf     = {research/QR2021.pdf},
+  local_si      = {research/QR2021_SI.pdf},
+  local_image   = {research/QR2021.png},
+  selected      = {true},
+  note          = {Systematic assessment of QM/MM-based quantum refinement for metalloproteins, establishing which protocols recover chemically sensible metal-site geometries from X-ray data.}
+}
+
+@article{voufack2019ytio3,
+  author        = {Voufack, Ariste Bolivard and Kibalin, Iurii and Yan, Zeyin and Claiser, Nicolas and Gueddida, Saber and Gillon, Beatrice and Porcher, Florence and Gukasov, Arsen and Sugimoto, Kunishisa and Lecomte, Claude and Dahaoui, Slimane and Gillet, Jean-Michel and Souhassou, Mohamed},
+  title         = {Spin resolved electron density study of YTiO3 in its ferromagnetic phase: signature of orbital ordering},
+  journal       = {IUCrJ},
+  abbrev        = {IUCrJ},
+  year          = {2019},
+  volume        = {6},
+  number        = {5},
+  pages         = {884-894},
+  doi           = {10.1107/S2052252519009230},
+  local_pdf     = {research/IUCrJ2019.pdf},
+  local_si      = {research/IUCrJ2019_SI.pdf},
+  local_image   = {research/IUCrJ2019.jpg},
+  note          = {Joint X-ray and polarized-neutron analysis resolves the spin-split electron density of ferromagnetic YTiO3 and exposes a direct signature of orbital ordering.}
+}
+
+@article{gueddida2018jcp,
+  author        = {Gueddida, Saber and Yan, Zeyin and Kibalin, Iurii and Voufack, Ariste Bolivard and Claiser, Nicolas and Souhassou, Mohamed and Lecomte, Claude and Gillon, Beatrice and Gillet, Jean-Michel},
+  title         = {Joint refinement model for the spin resolved one-electron reduced density matrix of YTiO3 using magnetic structure factors and magnetic Compton profiles data},
+  journal       = {The Journal of Chemical Physics},
+  abbrev        = {J. Chem. Phys.},
+  year          = {2018},
+  volume        = {148},
+  number        = {16},
+  articleno     = {164106},
+  doi           = {10.1063/1.5022770},
+  local_pdf     = {research/JCP2018.pdf},
+  local_image   = {research/JCP2018.png},
+  note          = {Combines magnetic structure factors with magnetic Compton profiles to reconstruct the spin-resolved one-electron reduced density matrix, tying together position- and momentum-space observables.}
+}
+
+@article{gueddida2018actaa,
+  author        = {Gueddida, Saber and Yan, Zeyin and Gillet, Jean-Michel},
+  title         = {Development of a joint refinement model for the spin-resolved one-electron reduced density matrix using different data sets},
+  journal       = {Acta Crystallographica Section A},
+  abbrev        = {Acta Cryst. A},
+  year          = {2018},
+  volume        = {74},
+  number        = {2},
+  pages         = {131-142},
+  doi           = {10.1107/S2053273318000384},
+  local_pdf     = {research/ActaCrystA2018.pdf},
+  local_image   = {research/ActaCrystA2018.png},
+  note          = {Methodological framework for reconstructing the one-electron reduced density matrix by jointly refining complementary experimental data sets.}
+}
+
+@article{bosnjakovic2017jib,
+  author        = {Bosnjakovic-Pavlovic, Nada and Bajuk-Bogdanovic, Danica and Zakrzewska, Joanna and Yan, Zeyin and Holclajtner-Antunovic, Ivanka and Gillet, Jean-Michel and Spasojevic-de Bire, Anne},
+  title         = {Reactivity of 12-tungstophosphoric acid and its inhibitor potency toward Na+/K+-ATPase: A combined 31P NMR study, ab initio calculations and crystallographic analysis},
+  journal       = {Journal of Inorganic Biochemistry},
+  abbrev        = {J. Inorg. Biochem.},
+  year          = {2017},
+  volume        = {176},
+  pages         = {90-99},
+  doi           = {10.1016/j.jinorgbio.2017.08.014},
+  local_pdf     = {research/JIB2017.pdf},
+  local_si      = {research/JIB2017_SI.pdf},
+  local_image   = {research/JIB2017.jpg},
+  note          = {NMR, ab initio calculations and crystallography together explain how a polyoxometalate inhibits Na+/K+-ATPase - an early bridge from my methods work to biological targets.}
+}
+
+@article{kibalin2017prb1,
+  author        = {Kibalin, I. A. and Yan, Zeyin and Voufack, A. B. and Gueddida, S. and Gillon, B. and Gukasov, A. and Porcher, F. and Bataille, A. M. and Morini, F. and Claiser, N. and Souhassou, M. and Lecomte, C. and Gillet, J.-M. and Ito, M. and Suzuki, K. and Sakurai, H. and Sakurai, Y. and Hoffmann, C. M. and Wang, X. P.},
+  title         = {Spin density in YTiO3: I. Joint refinement of polarized neutron diffraction and magnetic x-ray diffraction data leading to insights into orbital ordering},
+  journal       = {Physical Review B},
+  abbrev        = {Phys. Rev. B},
+  year          = {2017},
+  volume        = {96},
+  number        = {5},
+  articleno     = {054426},
+  doi           = {10.1103/PhysRevB.96.054426},
+  local_pdf     = {research/PRB2017_1.pdf},
+  local_image   = {research/PRB2017_1.jpg},
+  note          = {Part I: position-space spin density of YTiO3 from a joint refinement of polarized neutron and magnetic X-ray diffraction data.}
+}
+
+@article{yan2017prb2,
+  author        = {Yan, Zeyin and Kibalin, I. A. and Claiser, N. and Gueddida, S. and Gillon, B. and Gukasov, A. and Voufack, A. B. and Morini, F. and Sakurai, Y. and Brancewicz, M. and Itou, M. and Itoh, M. and Tsuji, N. and Ito, M. and Souhassou, M. and Lecomte, C. and Cortona, P. and Gillet, J.-M.},
+  title         = {Spin density in YTiO3: II. Momentum-space representation of electron spin density supported by position-space results},
+  journal       = {Physical Review B},
+  abbrev        = {Phys. Rev. B},
+  year          = {2017},
+  volume        = {96},
+  number        = {5},
+  articleno     = {054427},
+  doi           = {10.1103/PhysRevB.96.054427},
+  local_pdf     = {research/PRB2017_2.pdf},
+  local_image   = {research/PRB2017_2.png},
+  note          = {Part II: the companion momentum-space picture, showing that position- and momentum-space spin densities tell a mutually consistent story.}
+}
+
+@article{voufack2017actab,
+  author        = {Voufack, Ariste Bolivard and Claiser, Nicolas and Lecomte, Claude and Pillet, Sebastien and Pontillon, Yves and Gillon, Beatrice and Yan, Zeyin and Gillet, Jean-Michel and Marazzi, Marco and Genoni, Alessandro and Souhassou, Mohamed},
+  title         = {When combined X-ray and polarized neutron diffraction data challenge high-level calculations: spin-resolved electron density of an organic radical},
+  journal       = {Acta Crystallographica Section B},
+  abbrev        = {Acta Cryst. B},
+  year          = {2017},
+  volume        = {73},
+  number        = {4},
+  pages         = {544-549},
+  doi           = {10.1107/S2052520617008241},
+  local_pdf     = {research/ActaCrystB2017.pdf},
+  local_image   = {research/ActaCrystB2017.png},
+  note          = {Experiment pushes back on theory: the measured spin-resolved density of an organic radical disagrees with high-level calculations, a useful reminder for anyone benchmarking methods.}
+}
+
+@phdthesis{yan2018thesis,
+  author        = {Yan, Zeyin},
+  title         = {Joint refinement of charge and spin densities: from position space to momentum space},
+  school        = {CentraleSupelec, Universite Paris-Saclay},
+  abbrev        = {PhD Thesis},
+  year          = {2018},
+  local_pdf     = {research/Thesis_Zeyin_YAN.pdf},
+  slides_pdf    = {research/Soutenance_PhD.pptx},
+  note          = {Doctoral thesis on joint refinement of charge and spin densities, connecting position-space and momentum-space representations.}
+}

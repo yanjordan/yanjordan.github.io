@@ -1,154 +1,195 @@
 <!doctype html>
 <html lang="en">
-   
-  <head>
-  <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Zeyin Yan by YanJordan</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Code &middot; Zeyin Yan</title>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-    <script>
-      var _hmt = _hmt || [];
-      (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?f28221a8081d8a654f3de9ebd2e630ad";
-        var s = document.getElementsByTagName("script")[0]; 
-        s.parentNode.insertBefore(hm, s);
-      })();
-      </script>
-      
-    <!-- For all browsers -->
-    <link rel="stylesheet" href="assets/css/academicons.min.css"/>
-    <link rel="stylesheet" href="assets/css/academicons.css"/>
-    
-    <style>
-      button.accordion {
-      font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-      cursor: pointer;
-      padding: 0px;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-size: 100%;
-      transition: 0.3s;
-      background-color: #f8f8f8;
-      }
-      button.accordion.active, button.accordion:hover {
-      background-color: #f8f8f8;
-      }
-      button.accordion:after {
-      content: " [+] ";
-      font-size: 90%;
-      color:#777;
-      float: left;
-      margin-left: 1px;
-      }
+  <meta name="author" content="Zeyin Yan">
+  <meta name="description" content="Open-source scientific code by Zeyin Yan: D2AF distortion analysis, ONIOM-based quantum refinement, tunnelling under electric fields, and density-matrix tools.">
+  <meta name="keywords" content="Zeyin Yan, nanomedicine, multiscale simulation, DFT, molecular dynamics, dissipative particle dynamics, machine learning potential, Bayesian optimization, quantum refinement, drug delivery, Jinan University, inAI">
+  <link rel="canonical" href="https://yanjordan.github.io/code.html">
 
-      button.accordion.active:after {
-      content: " [\2212] ";
-      }
-      div.panel {
-      padding: 0 20px;
-      margin-top: 5px;
-      display: none;
-      background-color: white;
-      font-size: 100%;
-      }
-      div.panel.show {
-      display: block !important;
-      }
-      .social-row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Zeyin Yan</h1>
-        <p>Associate Professor<br>Jinan University</p>
-        <p>Research Affiliate<br>Institute of Nanotechnology and Intelligence (inAI) </p>
-    <h3><a href="https://yanjordan.github.io/">Home</a></h3>
-        <h3><a href="https://yanjordan.github.io/research.html">Research</a></h3>
-    <h3><a href="https://yanjordan.github.io/research/Zeyin_YAN_CV_EN.pdf">CV</a></h3>  
-        <h3><a href="https://yanjordan.github.io/code.html">Code</a></h3> 
-        <!--<h3><a href="https://yanjordan.github.io/personal.html">Personal</a></h3>-->
-    <b>Social</b><br>
-        <div class="social-row">
-          <a href="mailto:zeyin.yan@outlook.com" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a><br>
-          <a href="https://www.researchgate.net/profile/Zeyin-Yan" target="_blank"><i class="ai ai-fw ai-researchgate-square"></i> ResearchGate</a><br>
-          <a href="http://github.com/YanJordan"><i class="fa fa-fw fa-github-square"></i> GitHub</a><br>
-          <a href="https://orcid.org/0000-0003-3359-7547"><i class="ai ai-orcid-square"></i> ORCID</a><br> 
-          <br>
-        </div>
-        <br>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Zeyin Yan">
+  <meta property="og:title" content="Code &middot; Zeyin Yan">
+  <meta property="og:description" content="Open-source scientific code by Zeyin Yan: D2AF distortion analysis, ONIOM-based quantum refinement, tunnelling under electric fields, and density-matrix tools.">
+  <meta property="og:url" content="https://yanjordan.github.io/code.html">
+  <meta property="og:image" content="https://yanjordan.github.io/research/NC2024.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
-        <p><b>Contact:</b><br>Institute of Nanotechnology and Intelligence (inAI)<br>Jinan University<br>Guangzhou<br>P.R. China</p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-          </header>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="stylesheet" href="stylesheets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="wrapper">
+    <header class="sidebar">
+      <h1 class="site-name"><a href="index.html">Zeyin Yan</a></h1>
+      <p class="site-role">
+        Associate Professor<br>
+        <span class="muted">Institute of Nanotechnology and Intelligence (inAI)</span><br>
+        <span class="muted">Jinan University</span>
+      </p>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="research.html">Research</a>
+          </li>
+          <li>
+            <a href="publications.html">Publications</a>
+          </li>
+          <li>
+            <a href="code.html" class="current" aria-current="page">Code</a>
+          </li>
+          <li>
+            <a href="cv.html">CV</a>
+          </li>
+          <li>
+            <a href="news.html">News</a>
+          </li>
+          <li>
+            <a href="teaching.html">Teaching</a>
+          </li>
+          <li>
+            <a href="join.html">Join us</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-block">
+        <h2 class="sidebar-heading">Elsewhere</h2>
+        <ul class="link-list">
+          <li><a href="mailto:zeyin.yan@outlook.com">Email</a></li>
+          <li><a href="https://orcid.org/0000-0003-3359-7547" target="_blank" rel="noopener noreferrer">ORCID</a></li>
+          <li><a href="https://www.webofscience.com/wos/author/record/T-5967-2018" target="_blank" rel="noopener noreferrer">Web of Science</a></li>
+          <li><a href="https://www.researchgate.net/profile/Zeyin-Yan" target="_blank" rel="noopener noreferrer">ResearchGate</a></li>
+          <li><a href="https://github.com/YanJordan" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-block">
+        <h2 class="sidebar-heading">Contact</h2>
+        <p class="muted small">
+          Institute of Nanotechnology and Intelligence (inAI)<br>
+          Jinan University<br>
+          Guangzhou, P.R. China<br>
+          <a href="mailto:zeyin.yan@outlook.com">zeyin.yan@outlook.com</a>
+        </p>
+      </div>
+    </header>
+
+    <main id="main">
       <section>
-  <h2><a id="computer-code" class="anchor" href="#computercode" aria-hidden="true"><span class="octicon octicon-link"></span></a>Computer Code</h2>
-    <h3>Fortran</h3>
-        <ul>
-          <li><a href="https://github.com/YanJordan/ONIOM_QR_mod">ONIOM-based Quantum refinement code</a> <br>
-            related works: <br>
-             <a href="https://yanjordan.github.io/research/QR2021.pdf"> Multiscale Quantum Refinement Approaches for Metalloproteins </a> 
-             <br>
-             <a href="https://yanjordan.github.io/research/NC2024.pdf"> Accelerating Reliable Multiscale Quantum Refinement of Protein-Drug Systems Enabled by Machine Learning </a> </li>
-             <br> </li>
-
-          <li><a href="https://github.com/yanjordan/Cluster_Model_Cry14"> Cluster Model to compute Density Matrix from Crystal 14, other properties are also added </a> <br> 
-            related works: <br> 
-            <!-- related work: <br> <a href="https://yanjordan.github.io/research/QR2021.pdf"> -->
-              <a href="https://yanjordan.github.io/research/Thesis_Zeyin_YAN.pdf "> Reconstruction of momentum density and determination of oneelectron reduced density matrix </a> 
-              <br> 
-              <a href="https://yanjordan.github.io/research/JCP2018.pdf "> Joint refinement model for the spin resolved one-electron reduced density matrix of YTiO3 using polarized neutron 
-                dffraction and magnetic Compton scattering data </a> 
-                <br> 
-              <a href="https://yanjordan.github.io/research/ActaCrystA2018.pdf "> Development of a joint refinement model for the spin-resolved one-electron reduced density 
-                matrix using different data sets </a> </li> 
-                <br> 
-            
-              <li><a href="https://github.com/YanJordan/QT_Polyrate17_Gaussrate17_Mod">Modification of Polyrate and Gaussrate for EEF </a>  <br> 
-              related work: <br> <a href="https://yanjordan.github.io/research/JPCL2023.pdf"> 
-                Quantum Tunneling in Reactions Modulated by External Electric Fields: Reactivity and Selectivity </a> 
-              <br> </li>
-          <li><a>Others in coming </a> </li>
-        </ul>
-    
-    <h3>Python</h3>
-        <ul>
-          <li>D2AF: <a href="https://github.com/oscarchung-lab/D2AF"> GitHub</a>,  <a href="https://pypi.org/project/D2AF/"> PyPI </a><br>
-            related work: <br>
-             <a href="https://yanjordan.github.io/research/D2AF2025.pdf"> An efficient and flexible approach for local distortion: distortion distribution analysis enabled by fragmentation  </a> </li>
-             <br> 
-            
-          <li><a href="https://github.com/yanjordan/ECHG">Python GUI of ECHG (already in MATLAB GUI) </a> <br>
-    
-          <li><a href="https://github.com/yanjordan/Pymol_scripts">Python function scripts for pymol </a> <br>
-        </ul>
-    
-
-
-    <h3>Matlab</h3>
-        <ul>
-          <li><a href="https://github.com/yanjordan/MATLAB_GUI_ED">MATLAB GUI for drawing electron density maps (Crystal, Gaussian), Density matrix, Moyal, Compton Profile, Moment dnesnsity reconstruction</a> <br>
-
-        </ul> 
-
-    <h3>Gaussian externals</h3>
-        <ul>
-          <li><a href="https://github.com/yanjordan/Gaussian_ext">Externals to other programs and some tools for Gaussian computations </a> </li>
-    
-        </ul>
-    <hr>
+        <h2>Code</h2>
+        <p class="lede">
+      Code from my papers, plus tools I keep coming back to. Most of it is
+      research code: usable, but written for a purpose rather than for a product.
+    </p>
       </section>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-  </body>
+
+      <section>
+        <h3>Python</h3>
+        <ul class="code-list">
+          <li class="code-item">
+            <p class="code-name">D2AF</p>
+            <p>Distortion distribution analysis by fragmentation - decomposes distortion energy to individual atoms and produces a distortion map.</p>
+            <p class="pub-links">
+              <a class="btn" href="https://github.com/oscarchung-lab/D2AF" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a class="btn" href="https://pypi.org/project/D2AF/" target="_blank" rel="noopener noreferrer">PyPI</a>
+              <a class="btn" href="https://doi.org/10.1039/d4sc07226j" target="_blank" rel="noopener noreferrer">DOI</a>
+            </p>
+            <p class="muted small">Used in: Chem. Sci. 2025, 16, 2351-2362</p>
+          </li>
+          <li class="code-item">
+            <p class="code-name">ECHG</p>
+            <p>Python GUI for electron charge density maps (a port of the earlier MATLAB GUI).</p>
+            <p class="pub-links">
+              <a class="btn" href="https://github.com/yanjordan/ECHG" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </p>
+          </li>
+          <li class="code-item">
+            <p class="code-name">Pymol_scripts</p>
+            <p>Helper scripts for PyMOL, mostly for setting up and inspecting QM/MM models.</p>
+            <p class="pub-links">
+              <a class="btn" href="https://github.com/yanjordan/Pymol_scripts" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3>Fortran</h3>
+        <ul class="code-list">
+          <li class="code-item">
+            <p class="code-name">ONIOM_QR_mod</p>
+            <p>ONIOM-based quantum refinement code for metalloproteins and protein-drug systems.</p>
+            <p class="pub-links">
+              <a class="btn" href="https://github.com/YanJordan/ONIOM_QR_mod" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a class="btn" href="https://doi.org/10.1021/acs.jctc.1c00148" target="_blank" rel="noopener noreferrer">DOI</a>
+            </p>
+            <p class="muted small">Used in: J. Chem. Theory Comput. 2021, 17, 3783-3796; Nat. Commun. 2024, 15, 4181</p>
+          </li>
+          <li class="code-item">
+            <p class="code-name">QT_Polyrate17_Gaussrate17_Mod</p>
+            <p>Modified Polyrate / Gaussrate for tunnelling rate calculations under an external electric field.</p>
+            <p class="pub-links">
+              <a class="btn" href="https://github.com/YanJordan/QT_Polyrate17_Gaussrate17_Mod" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a class="btn" href="https://doi.org/10.1021/acs.jpclett.2c03461" target="_blank" rel="noopener noreferrer">DOI</a>
+            </p>
+            <p class="muted small">Used in: J. Phys. Chem. Lett. 2023, 14, 1124-1132</p>
+          </li>
+          <li class="code-item">
+            <p class="code-name">Cluster_Model_Cry14</p>
+            <p>Cluster model for computing density matrices and related properties from CRYSTAL14 output.</p>
+            <p class="pub-links">
+              <a class="btn" href="https://github.com/yanjordan/Cluster_Model_Cry14" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a class="btn" href="https://doi.org/10.1063/1.5022770" target="_blank" rel="noopener noreferrer">DOI</a>
+            </p>
+            <p class="muted small">Used in: J. Chem. Phys. 2018, 148, 164106; Acta Cryst. A 2018, 74, 131-142</p>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3>MATLAB</h3>
+        <ul class="code-list">
+          <li class="code-item">
+            <p class="code-name">MATLAB_GUI_ED</p>
+            <p>GUI for electron density maps (CRYSTAL, Gaussian), density matrices, Moyal functions, Compton profiles and momentum density reconstruction.</p>
+            <p class="pub-links">
+              <a class="btn" href="https://github.com/yanjordan/MATLAB_GUI_ED" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3>Gaussian utilities</h3>
+        <ul class="code-list">
+          <li class="code-item">
+            <p class="code-name">Gaussian_ext</p>
+            <p>External interfaces from Gaussian to other programs, plus assorted tools for Gaussian calculations.</p>
+            <p class="pub-links">
+              <a class="btn" href="https://github.com/yanjordan/Gaussian_ext" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </p>
+          </li>
+        </ul>
+      </section>
+      <footer class="page-footer">
+        <p class="muted small">
+          &copy; 2026 Zeyin Yan &middot;
+          Built from <a href="https://github.com/YanJordan/yanjordan.github.io" target="_blank" rel="noopener noreferrer">source</a>
+          on 2026-08-30 &middot;
+          Hosted on GitHub Pages
+        </p>
+      </footer>
+    </main>
+  </div>
+</body>
 </html>

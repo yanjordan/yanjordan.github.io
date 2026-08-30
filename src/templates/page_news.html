@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block description %}News and updates from Zeyin Yan's group at inAI, Jinan University.{% endblock %}
+
+{% block content %}
+      <section>
+        <h2>News</h2>
+        {% if news %}
+        <ol class="news-list">
+          {% for n in news %}
+          <li>
+            <p class="news-date">{{ n.date }}</p>
+            <p class="news-body">{{ n.body }}</p>
+          </li>
+          {% endfor %}
+        </ol>
+        {% else %}
+        <p class="empty-state">{{ news_empty }}</p>
+        {% endif %}
+      </section>
+{% endblock %}

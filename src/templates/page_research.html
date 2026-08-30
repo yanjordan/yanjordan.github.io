@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block description %}Research directions of Zeyin Yan: multiscale simulation of nanomedicine, machine learning for physics-based modelling, and Bayesian optimization for closed-loop design.{% endblock %}
+
+{% block content %}
+      <section>
+        <h2>Research</h2>
+        <p class="lede">{{ research.intro }}</p>
+      </section>
+
+      {% for t in research.thrusts %}
+      <section class="thrust">
+        <p class="thrust-tag">{{ t.tag }}</p>
+        <h3>{{ loop.index }}. {{ t.title }}</h3>
+        <p>{{ t.body }}</p>
+        <ul class="keyword-list">
+          {% for k in t.keywords %}<li>{{ k }}</li>{% endfor %}
+        </ul>
+      </section>
+      {% endfor %}
+
+      <section>
+        <h2>{{ research.foundations_heading }}</h2>
+        <p>{{ research.foundations_intro }}</p>
+        <dl class="foundations">
+          {% for f in research.foundations %}
+          <dt>{{ f.title }}</dt>
+          <dd>
+            <p>{{ f.body }}</p>
+            <p class="muted small">{{ f.refs }}</p>
+          </dd>
+          {% endfor %}
+        </dl>
+      </section>
+{% endblock %}

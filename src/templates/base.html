@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ page_title }} &middot; {{ site.name }}{% endblock %}</title>
+
+  <meta name="author" content="{{ site.name }}">
+  <meta name="description" content="{% block description %}{{ site.description }}{% endblock %}">
+  <meta name="keywords" content="{{ site.keywords }}">
+  <link rel="canonical" href="{{ site.base_url }}/{% if page_file != 'index.html' %}{{ page_file }}{% endif %}">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:title" content="{{ page_title }} &middot; {{ site.name }}">
+  <meta property="og:description" content="{{ self.description() }}">
+  <meta property="og:url" content="{{ site.base_url }}/{% if page_file != 'index.html' %}{{ page_file }}{% endif %}">
+  <meta property="og:image" content="{{ site.base_url }}/{{ site.og_image }}">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="stylesheet" href="stylesheets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="wrapper">
+    <header class="sidebar">
+      <h1 class="site-name"><a href="index.html">{{ site.name }}</a></h1>
+      <p class="site-role">
+        {{ site.role }}<br>
+        <span class="muted">{{ site.institute }}</span><br>
+        <span class="muted">{{ site.university }}</span>
+      </p>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav">
+          {% for item in nav %}
+          <li>
+            <a href="{{ item.file }}"{% if item.file == page_file %} class="current" aria-current="page"{% endif %}>{{ item.label }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+
+      <div class="sidebar-block">
+        <h2 class="sidebar-heading">Elsewhere</h2>
+        <ul class="link-list">
+          {% for link in links %}
+          <li><a href="{{ link.url }}"{% if not link.url.startswith('mailto:') %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ link.label }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="sidebar-block">
+        <h2 class="sidebar-heading">Contact</h2>
+        <p class="muted small">
+          {{ site.institute }}<br>
+          {{ site.university }}<br>
+          {{ site.city }}, {{ site.country }}<br>
+          <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        </p>
+      </div>
+    </header>
+
+    <main id="main">
+{% block content %}{% endblock %}
+      <footer class="page-footer">
+        <p class="muted small">
+          &copy; {{ build_date[:4] }} {{ site.name }} &middot;
+          Built from <a href="https://github.com/YanJordan/yanjordan.github.io" target="_blank" rel="noopener noreferrer">source</a>
+          on {{ build_date }} &middot;
+          Hosted on GitHub Pages
+        </p>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>

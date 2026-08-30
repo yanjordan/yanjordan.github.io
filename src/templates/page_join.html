@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block description %}Openings for PhD students, master's students and postdocs in Zeyin Yan's group at inAI, Jinan University.{% endblock %}
+
+{% block content %}
+      <section>
+        <h2>Join us</h2>
+        {% if join.intro %}
+        <p class="lede">{{ join.intro }}</p>
+        {% endif %}
+
+        {% if join.positions %}
+        <ul class="plain-list">
+          {% for p in join.positions %}
+          <li>
+            <p class="tl-role">{{ p.title }}</p>
+            <p>{{ p.body }}</p>
+          </li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        <p class="empty-state">{{ join.empty }}</p>
+        {% endif %}
+
+        <p>If you are interested in the research described on this site, feel free to
+        write to <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+      </section>
+{% endblock %}

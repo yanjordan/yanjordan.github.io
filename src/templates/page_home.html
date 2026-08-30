@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% from "_macros.html" import figure, publication_compact %}
+
+{% block title %}{{ site.name }} &middot; {{ site.role }}, {{ site.university }}{% endblock %}
+{% block description %}{{ site.description }}{% endblock %}
+
+{% block content %}
+      <section class="intro">
+        <p class="lede">{{ home.bio }}</p>
+      </section>
+
+      <section>
+        <h2>{{ home.focus_heading }}</h2>
+        <p>{{ home.focus }}</p>
+
+        <div class="thrust-grid">
+          {% for t in research.thrusts %}
+          <article class="thrust-card">
+            <p class="thrust-tag">{{ t.tag }}</p>
+            <h3>{{ t.title }}</h3>
+            <ul class="keyword-list">
+              {% for k in t.keywords[:4] %}<li>{{ k }}</li>{% endfor %}
+            </ul>
+          </article>
+          {% endfor %}
+        </div>
+        <p class="more"><a href="research.html">More about the research &rarr;</a></p>
+      </section>
+
+      <section>
+        <h2>Selected publications</h2>
+        <ul class="pub-list compact">
+          {% for p in pubs.selected %}
+          {{ publication_compact(p) }}
+          {% endfor %}
+        </ul>
+        <p class="more"><a href="publications.html">All {{ pubs.count }} publications &rarr;</a></p>
+      </section>
+
+      <section>
+        <h2>How I think about it</h2>
+        <p>{{ home.philosophy }}</p>
+      </section>
+
+      <section>
+        <h2>Selected figures</h2>
+        <div class="figure-grid">
+          {% for f in home.figures %}
+          {{ figure(f.src, f.webp, f.alt, f.caption) }}
+          {% endfor %}
+        </div>
+      </section>
+{% endblock %}

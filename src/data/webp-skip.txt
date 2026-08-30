@@ -1,0 +1,2 @@
+# Figures where WebP came out larger than the original: keep the original.
+research/IUCrJ2019.jpg

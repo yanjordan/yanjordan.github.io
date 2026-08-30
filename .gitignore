@@ -1,0 +1,13 @@
+# WorkBuddy project memory (never commit)
+.workbuddy/
+
+# Python caches
+__pycache__/
+*.pyc
+
+# Build / optimization temp files
+*.part
+
+# Local environment
+.venv/
+venv/
