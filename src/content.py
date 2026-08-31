@@ -382,6 +382,12 @@ CV = {
     ],
     "funding": [
         {
+            "period": "2025 &ndash; 2028",
+            "title": "Protein&ndash;drug binding affinity prediction based on multi-scale computation combined with machine learning",
+            "org": "Basic Research Program (General Project), Shenzhen Science and Technology Innovation Commission",
+            "detail": "CNY 300k. Main participant (actual applicant).",
+        },
+        {
             "period": "2023 &ndash; 2026",
             "title": "Combining machine learning with quantum refinement methods for protein-drug structures",
             "org": "Natural Science Foundation of Shenzhen Innovation Committee",
